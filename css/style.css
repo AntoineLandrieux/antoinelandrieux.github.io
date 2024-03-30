@@ -2,21 +2,49 @@
 
 * {
     inset: 0;
-    padding: 0;
     margin: 0;
     border: 0;
+    padding: 0;
+    outline: none;
+    color: #ffffff;
+    font-size: 3vmin;
     font-family: "Press Start 2P", sans-serif;
 }
 
 body {
     height: 100%;
     width: 100vw;
-    background-image: url("../resource/background_body.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #0B042B;
 }
 
-header {
+nav {
+    position: fixed;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: 0%;
+    transform: translateY(-100%);
+    animation: spawn ease-in-out 0.25s both;
+}
+
+.btn {
+    flex: 1;
+    text-decoration: none;
+    padding: 1.5em;
+    text-align: center;
+    transition: flex .5s ease-in-out;
+    background-color: #41414148;
+}
+
+.btn:hover {
+    flex: 2;
+    transition: flex .5s ease-in-out;
+}
+
+main {
     max-height: max-content;
     min-height: 90vh;
     width: 100%;
@@ -30,44 +58,9 @@ header {
     flex-direction: column;
 }
 
-nav {
-    position: fixed;
-    width: 100%;
-    height: min-content;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    top: 0%;
-}
-
-.btn {
-    flex: 1;
-    color: #fff;
-    text-decoration: none;
-    padding: 1.5em;
-    text-align: center;
-    transition: flex .5s ease-in-out;
-    background-color: #41414148;
-}
-
-.btn:hover {
-    flex: 2;
-    transition: flex .5s ease-in-out;
-}
-
 .title {
-    color: #fff;
-    margin: 5px;
-    font-size: 10vmin;
-    transform: translateY(100px);
-    animation: spawn ease-in-out 1s both;
-}
-
-#lang {
-    width: 50vmin;
-    transform: translateY(-100px);
-    animation: spawn ease-in-out 1s both;
+    margin: 3px;
+    font-size: 12vmin;
 }
 
 footer {
@@ -76,12 +69,6 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-footer *,
-footer * * {
-    font-size: 3vmin;
-    color: #fff;
 }
 
 @keyframes spawn {
