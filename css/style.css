@@ -60,7 +60,18 @@ main {
 
 .title {
     margin: 3px;
-    font-size: 12vmin;
+    font-size: 10vmin;
+}
+
+#message {
+    padding: 10px;
+}
+
+#message::after {
+    content: "|";
+    font-weight: bolder;
+    animation: mouse 0.5s infinite;
+    font-size: 4vmin;
 }
 
 footer {
@@ -74,5 +85,20 @@ footer {
 @keyframes spawn {
     to {
         transform: translateY(0);
+    }
+}
+
+@keyframes mouse {
+    from {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
     }
 }
