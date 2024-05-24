@@ -48,7 +48,7 @@ main {
     max-height: max-content;
     min-height: 90vh;
     width: 100%;
-    background-image: url("../resource/background_main.svg");
+    background-image: url("../resources/img/background_main.svg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0 0 2.5em 2.5em;
