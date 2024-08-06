@@ -16,7 +16,6 @@ main {
     flex-direction: column;
 }
 
-
 #about h1 {
     margin: 10px;
     text-align: center;
@@ -72,11 +71,27 @@ main {
     line-height: 1.5;
 }
 
+.separator {
+    background-image: url("../resources/images/separator.gif");
+    box-shadow: 3px 3px #085399;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+    height: 10vmin;
+    width: 90%;
+    margin: 5%;
+    border-radius: 10px;
+}
+
 section h2 {
-    text-decoration: underline;
     font-size: max(7vmin, 25px);
-    margin: 10px;
-    padding: 10px;
+}
+
+section h2::before,
+section h2::after {
+    content: attr(emoji);
+    font-size: max(6vmin, 20px);
+    text-decoration: none;
 }
 
 section .list {
@@ -89,9 +104,9 @@ section .list {
 
 .item {
     cursor: pointer;
-    flex: 1;
     margin: 10px;
-    padding: 10px;
+    width: 100%;
+    flex: 1;
 }
 
 footer {
@@ -100,4 +115,8 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+footer * {
+    font-size: 3vmin;
 }

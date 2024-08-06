@@ -144,3 +144,9 @@ li.btn:hover span::after {
         flex: 3;
     }
 }
+
+@media screen and (max-width: 200px) {
+    nav {
+        display: none;
+    }
+}
