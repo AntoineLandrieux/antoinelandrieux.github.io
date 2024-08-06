@@ -1,37 +1,22 @@
 
-const w = setInterval(() => {
-    Write()
-}, 500);
+let lastY = window.scrollY;
+let navbr = document.getElementById("navbar");
+let input = document.getElementById("search");
 
-const element = document.getElementById("message");
+input.addEventListener('keypress', (event) => {
+    if (event.key == "Enter")
+        window.find(input.value);
+});
 
-const messages = [
-    "This site is so cool !",
-    "I love you",
-    `Today is ${new Date().toDateString()}`,
-    "Visit my github account now !",
-    "WTF? How did you get here??",
-    "I'm hungry.",
-    `How much is ${Math.floor(Math.random() * 100)}*${Math.floor(Math.random() * 100)} ?`
-];
+document.getElementById("search-submit").addEventListener('click', () => {
+    window.find(input.value);
+});
 
-let pos = 0;
-let msg = Math.floor(Math.random() * (messages.length - 1));
-let message = "Hello World!";
-
-function NextMessage() {
-    if ((msg + 1) >= messages.length)
-        msg = -1;
-    msg = msg + 1;
-    return msg;
-};
-
-function Write() {
-
-    if (element == null)
-        return clearInterval(w);
-
-    pos = (pos > message.length + 3) ? 0 : pos + 1;
-    message = (pos == 0 ? messages[NextMessage()] : message);
-    element.innerText = message.slice(0, pos);
-}
+document.addEventListener('scroll', () => {
+    let y = window.scrollY;
+    if (y > lastY && !navbr.classList.contains("hide"))
+        navbr.classList.add("hide");
+    else if (y < lastY)
+        navbr.classList.remove("hide");
+    lastY = y;
+});
