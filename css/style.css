@@ -34,47 +34,6 @@ main {
     color: transparent;
 }
 
-.container-image {
-    border-radius: 50%;
-    background-color: #111111;
-    shape-outside: margin-box;
-    width: min(50vmin, 460px);
-    height: min(50vmin, 460px);
-    overflow: hidden;
-    position: relative;
-}
-
-.container-image img {
-    image-rendering: pixelated;
-    object-fit: contain;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-    border-radius: 50%;
-}
-
-.container-image .reveal {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    text-decoration: none;
-    background-color: #000000a0;
-    backdrop-filter: blur(5px);
-    display: flex;
-    z-index: 1;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-}
-
-.container-image:hover .reveal {
-    z-index: 3;
-    transition: all 0s ease-in-out;
-}
-
 #about p {
     text-align: justify;
     margin: 10px;
