@@ -1,14 +1,25 @@
 @import url("ui/root.css");
 @import url("ui/navbar.css");
 
+body {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    min-height: 100vh;
+}
+
 main {
     max-height: max-content;
-    min-height: 70vh;
+    min-height: 60vh;
     width: 100%;
     background-image: url("../resources/images/header.gif");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    image-rendering: pixelated;
     border-radius: 0 0 10px 10px;
     display: flex;
     align-items: center;
@@ -16,90 +27,126 @@ main {
     flex-direction: column;
 }
 
-#about {
+section {
+    width: max(60%, 90vmin);
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-#about h1 {
+h1 {
     cursor: pointer;
     text-align: center;
     text-wrap: wrap;
-    font-size: 7vmax;
-    background-image: linear-gradient(#7e7e7e, #000000);
+    font-size: 7vh;
+    background-image: linear-gradient(#7e7e7e, var(--black-text));
     background-clip: text;
     color: transparent;
 }
 
-#about p {
-    text-align: justify;
+.to {
+    text-decoration: none;
+    animation: floating .25s alternate infinite;
+}
+
+.button {
     margin: 10px;
-    line-height: 1.5;
-}
-
-.separator {
-    background-image: url("../resources/images/separator.gif");
-    box-shadow: 3vmin 3vmin #089933;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    image-rendering: pixelated;
-    height: 10vmin;
-    width: 90%;
-    margin: 5%;
+    padding: 10px;
+    text-align: center;
+    width: max-content;
+    align-self: center;
     border-radius: 10px;
-}
-
-section h2 {
-    font-size: max(7vmin, 25px);
-}
-
-section h2::before,
-section h2::after {
-    content: attr(emoji);
-    font-size: max(6vmin, 20px);
+    border: 1px solid var(--black-text);
+    background-color: var(--background);
+    color: var(--black-text);
+    outline: none;
     text-decoration: none;
 }
 
-section .list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+.button:hover {
+    background-color: var(--black-text);
+    color: var(--background);
+    transition: .25s all ease-in-out;
 }
 
-.item {
-    cursor: pointer;
-    margin: 10px;
-    width: 100%;
-    flex: 1;
-    transform: scale(0.9);
-    transition: transform .5s ease-in-out;
+h2 {
+    padding: 10px;
+    text-align: center;
+    font-size: max(7vmin, 30px);
 }
 
-.item:hover {
-    transform: scale(1);
-    transition: transform .2s ease-in-out;
+h2::before,
+h2::after {
+    content: attr(emoji);
+    padding: 5px;
+    font-size: max(5vmin, 10px);
+    text-decoration: none;
+}
+
+section span,
+section a {
+    text-align: center;
+    margin: 5px;
+    word-wrap: normal;
+    font-size: var(--default-font-size);
+}
+
+#langs {
+    justify-self: center;
+    align-self: center;
+    width: 95%;
+    padding: 20px;
+    pointer-events: none;
+}
+
+hr {
+    width: 90%;
 }
 
 footer {
-    height: 10vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-footer * {
+footer span, footer a {
     font-size: 3vmin;
+    text-align: center;
 }
 
-@media screen and (max-width: 800px) {
-    .container-image {
-        display: none;
+.network {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.network a {
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px;
+    transform: scale(1);
+    transition: transform .5s ease-in-out;
+}
+
+.network a:hover {
+    transform: scale(1.4);
+    transition: transform .2s ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+    
+    .network {
+        justify-content: space-around;
+    }
+
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(5px);
     }
 }

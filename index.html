@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
 
@@ -15,98 +15,53 @@
 
 </head>
 
-<body>
+<body id="top">
 
     <nav id="navbar">
-        <ul class="image">
-            <img src="resources/icon/icon.svg" alt="Anto" />
-        </ul>
+
+        <span>Antoine LANDRIEUX</span>
+
         <ul class="menu">
-            <li class="btn">
-                <span class="name">REPO</span>
-                <ul>
-                    <li class="sub-btn"><a href="#pinned">Pinned</a></li>
-                    <li class="sub-btn"><a href="#starred">Stars</a></li>
-                    <li class="sub-btn"><a href="#archive">Archives</a></li>
-                </ul>
-            </li>
-            <li class="btn">
-                <span class="name">INFO</span>
-                <ul>
-                    <li class="sub-btn"><a href="#about">About</a></li>
-                    <li class="sub-btn"><a href="#footer">Bottom</a></li>
-                    <li class="sub-btn"><a href="README.md">README.md</a></li>
-                </ul>
-            </li>
-            <li class="btn">
-                <span class="name">NET</span>
-                <ul>
-                    <li class="sub-btn"><a href="https://github.com/AntoineLandrieux/">Github</a></li>
-                    <li class="sub-btn"><a href="#" onclick="alert('Discord: zydev_')">Discord</a></li>
-                    <li class="sub-btn"><a href="https://instagram.com/antoineldrx/">Instagram</a></li>
-                </ul>
-            </li>
+
+            <li class="btn"><a class="name" href="#top">Home</a></li>
+            <li class="btn"><a class="name" href="#knowledge">Work</a></li>
+
         </ul>
-        <ul class="search">
-            <input type="text" name="search" id="search" placeholder="search" spellcheck="false" autocomplete="off">
-            <input type="submit" name="search-submit" id="search-submit" value="">
-        </ul>
+
     </nav>
 
     <main></main>
 
-    <section id="about">
+    <section id="header">
+
+        <a href="#footer" class="to">↓ Scroll Down ↓</a>
         <h1>Antoine LANDRIEUX</h1>
-    </section>
-
-    <div class="separator"></div>
-
-    <section id="pinned">
-
-        <h2 emoji="🎀">Pinned</h2>
-
-        <div class="list">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=AntoineLandrieux&theme=dark"
-                class="item" alt="item">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=antoinelandrieux.github.io&theme=dark"
-                class="item" alt="item">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=BORIUM&theme=dark"
-                class="item" alt="item">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=LDRX&theme=dark"
-                class="item" alt="item">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=Website-Crawler&theme=dark"
-                class="item" alt="item">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=Ransomware&theme=dark"
-                class="item" alt="item">
-        </div>
 
     </section>
 
-    <section id="starred">
+    <section id="about">
 
-        <h2 emoji="🎯">Stars</h2>
+        <h2 emoji="🎀">About me</h2>
 
-        <div class="list">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=BORIUM&theme=dark"
-                class="item" alt="item">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=LDRX&theme=dark"
-                class="item" alt="item">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=platy-pixel-hack&theme=dark"
-                class="item" alt="item">
-        </div>
+        <span>Hello! I'm Antoine Landrieux, a software developer based in France.</span>
+        <span style="text-align: left;">Beyond my love for coding, I am someone who is curious, creative and always
+            ready to take on new challenges. I enjoy exploring new technologies and finding innovative solutions to
+            complex problems.</span>
+        <span style="text-align: left;">My goal: To continue to learn and grow as a developer, while contributing to
+            projects that have a positive impact on society.</span>
+
+        <a href="https://github.com/AntoineLandrieux/" alt="github" class="button">View my profile</a>
 
     </section>
 
-    <section id="archive">
+    <section id="knowledge">
 
-        <h2 emoji="📚">Archives</h2>
+        <h2 emoji="💻">Skills</h2>
 
-        <div class="list">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=ZyShop&theme=dark"
-                class="item" alt="item">
-            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=DiScUsS&theme=dark"
-                class="item" alt="item">
-        </div>
+        <img src="https://skillicons.dev/icons?i=git,html,js,css,cpp,c,php,py,java,bash,linux,windows,github,vscode,idea,clion&perline=8"
+            alt="langs" id="langs" />
+
+        <a href="#knowledge" onclick="alert('Comming soon')" alt="CV" class="button">Download my CV</a>
 
     </section>
 
@@ -114,11 +69,29 @@
 
     <footer id="footer">
 
-        <span>Antoine Landrieux <a href="https://github.com/AntoineLandrieux/" target="_blank">GITHUB</a></span>
+        <div class="network">
+            <a href="mailto:antoldrx.contact@gmail.com">
+                <img src="https://skillicons.dev/icons?i=gmail&theme=dark" alt="item">
+            </a>
+            <a href="https://github.com/AntoineLandrieux/">
+                <img src="https://skillicons.dev/icons?i=github&theme=dark" alt="item">
+            </a>
+            <a href="https://www.instagram.com/antoineldrx/">
+                <img src="https://skillicons.dev/icons?i=instagram&theme=dark" alt="item">
+            </a>
+            <a href="#contact" onclick="alert('Discord: ZyDev_');">
+                <img src="https://skillicons.dev/icons?i=discord&theme=dark" alt="item">
+            </a>
+        </div>
+
+        <span>
+            Portfolio by <a href="https://github.com/AntoineLandrieux/" target="_blank">Antoine Landrieux</a>.
+            All Rights Reserved.
+        </span>
+        <span>Last update : Fri Jan 17 2025 16:47:46 GMT+0100</span>
+        <a href="#top">Go to the top</a>
 
     </footer>
-
-    <script src="javascript/script.js"></script>
 
 </body>
 

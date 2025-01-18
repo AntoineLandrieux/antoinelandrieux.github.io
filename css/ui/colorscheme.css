@@ -1,0 +1,17 @@
+/**
+ * colorscheme.css (Antoine LANDRIEUX)
+**/
+
+html {
+    --black-text: #000;
+    --white-text: #fff;
+    --background: #ecd4cb;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --black-text: #fff;
+        --white-text: #000;
+        --background: #101b2b;
+    }
+}
