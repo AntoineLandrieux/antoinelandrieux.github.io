@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
-@import url("colorscheme.css");
 
 /**
  * root.css (Antoine LANDRIEUX)
@@ -13,10 +12,10 @@
     inset: 0;
     margin: 0;
     padding: 0;
-    color: var(--black-text);
+    color: #ffffff;
     box-sizing: border-box;
-    font-size: var(--default-font-size);
     font-family: "Poppins", sans-serif;
+    font-size: var(--default-font-size);
 }
 
 html {
