@@ -107,6 +107,11 @@ code {
     font-family: 'Consolas', monospace, sans-serif;
 }
 
+.blink-anim {
+    user-select: none;
+    animation: blink-anim 1.2s infinite;
+}
+
 strong {
     font-size: max(30px, 3vmin);
 }
@@ -220,6 +225,26 @@ footer a {
 
     .network {
         justify-content: space-around;
+    }
+
+}
+
+@keyframes blink-anim {
+
+    from {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
     }
 
 }
