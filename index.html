@@ -8,8 +8,10 @@
     <meta name="description" content="Hello World!" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="resources/icon/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="resources/icon/icon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="javascript/terminal.js"></script>
 
     <title>Antoine LANDRIEUX</title>
 
@@ -24,7 +26,7 @@
         <ul class="menu">
 
             <li class="btn"><a class="name" href="#about">About</a></li>
-            <li class="btn"><a class="name" href="#knowledge">Work</a></li>
+            <li class="btn"><a class="name" href="#work">Work</a></li>
 
         </ul>
 
@@ -78,17 +80,17 @@
 
         <h2 emoji="🎀">About me</h2>
 
-        <div id="terminal">
+        <div class="terminal">
 
-            <div id="task">
+            <div class="task">
 
-                <div class="circle bg-yellow"></div>
-                <div class="circle bg-green"></div>
-                <div class="circle bg-red"></div>
+                <div class="circle hide-terminal"></div>
+                <div class="circle full-terminal"></div>
+                <div class="circle close-terminal"></div>
 
             </div>
 
-            <div id="me">
+            <div class="terminal-content">
 
                 <p>
                     <span style="color: #00ff00;">antoine@anto-info</span>:<span style="color: #245fff;">~</span>$
@@ -127,20 +129,55 @@
 
         <a href="https://github.com/AntoineLandrieux/" alt="github" class="button">View my profile</a>
 
-    </section>
-
-    <section id="knowledge">
-
-        <h2 emoji="💻">Skills</h2>
-
         <img src="https://skillicons.dev/icons?i=git,html,js,css,cpp,c,php,py,java,bash,linux,windows,github,vscode,idea,clion&perline=8"
             alt="langs" id="langs" />
 
-        <a href="#knowledge" onclick="alert('Coming soon')" alt="CV" class="button">Download my CV</a>
+        <a href="#work" onclick="alert('Coming soon')" alt="CV" class="button">Download my CV</a>
+
+    </section>
+
+    <section id="work">
+
+        <h2 emoji="🎯">Projects</h2>
+
+        <div class="list">
+
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=antoinelandrieux.github.io&theme=tokyonight"
+                class="item" alt="item">
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=RepoTemplate&theme=tokyonight"
+                class="item" alt="item">
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=SOARE&theme=tokyonight"
+                class="item" alt="item">
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=OpenPoke&theme=tokyonight"
+                class="item" alt="item">
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=Website-Crawler&theme=tokyonight"
+                class="item" alt="item">
+            <img src="https://github-readme-stats.vercel.app/api/pin/?username=AntoineLandrieux&repo=Platy-Pixel-Hack&theme=tokyonight"
+                class="item" alt="item">
+
+        </div>
 
     </section>
 
     <footer id="footer">
+
+        <div class="terminal">
+
+            <div class="task">
+
+                <div class="circle hide-terminal"></div>
+                <div class="circle full-terminal"></div>
+                <div class="circle close-terminal"></div>
+
+            </div>
+
+            <div class="terminal-content">
+
+                <script src="https://animasci.com/embed/c8d62e33-b1c3-4983-860e-6b842bc91f00/Mlem.js"></script>
+
+            </div>
+
+        </div>
 
         <div class="network">
 
@@ -156,7 +193,7 @@
                 <img src="https://skillicons.dev/icons?i=instagram&theme=dark" alt="item">
             </a>
 
-            <a href="#contact" onclick="alert('Discord: ZyDev_');">
+            <a href="#contact" onclick="alert('Discord: zydev_');">
                 <img src="https://skillicons.dev/icons?i=discord&theme=dark" alt="item">
             </a>
 
@@ -167,7 +204,7 @@
             All Rights Reserved.
         </span>
 
-        <span>Last update : Wed Jul 09 2025</span>
+        <span>Last update : Wed Jul 10 2025</span>
 
         <a href="#top">Go to the top</a>
 

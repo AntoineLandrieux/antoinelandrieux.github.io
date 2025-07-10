@@ -1,5 +1,6 @@
 @import url("ui/root.css");
 @import url("ui/navbar.css");
+@import url("ui/terminal.css");
 
 body {
     display: flex;
@@ -59,64 +60,12 @@ code {
     font-family: monospace, sans-serif;
 }
 
-#terminal {
-    border-radius: 10px;
-    background-color: #292e36;
-}
-
-#task {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-}
-
-.circle {
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    width: var(--default-font-size);
-    height: var(--default-font-size);
-}
-
-.bg-red {
-    background-color: #ff0000;
-}
-
-.bg-yellow {
-    background-color: #ffff00;
-}
-
-.bg-green {
-    background-color: #00ff00;
-}
-
-#me {
-    margin: 10px;
-    padding: 10px;
-    color: #ffffff;
-    border-radius: 10px;
-    background-color: #000000;
-    font-family: 'Consolas', monospace, sans-serif;
-}
-
-#me p span,
-#me p {
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-    font-family: 'Consolas', monospace, sans-serif;
-}
-
-.blink-anim {
-    user-select: none;
-    animation: blink-anim 1.2s infinite;
-}
-
 strong {
     font-size: max(30px, 3vmin);
 }
 
-section {
+section,
+footer {
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -150,7 +99,7 @@ section {
 h2 {
     padding: 10px;
     text-align: center;
-    font-size: max(7vmin, 30px);
+    font-size: max(7vmin, 35px);
 }
 
 h2::before,
@@ -188,24 +137,42 @@ section a {
     justify-content: space-around;
 }
 
-footer {
+#work {
+    width: max(90%, 95vmin);
+}
+
+#work .list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+}
+
+.item {
+    flex: 1;
+    margin: 10px;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: transform .5s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(0.9);
+    transition: transform .2s ease-in-out;
 }
 
 footer span,
 footer a {
     text-align: center;
-    font-size: var(--default-font-size);
+    font-size: max(15px, 1.5vmin);
 }
 
 .network {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .network a {
@@ -225,26 +192,6 @@ footer a {
 
     .network {
         justify-content: space-around;
-    }
-
-}
-
-@keyframes blink-anim {
-
-    from {
-        opacity: 1;
-    }
-
-    49% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0;
     }
 
 }

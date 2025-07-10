@@ -1,0 +1,148 @@
+
+/**
+ * 
+ *  _    _      _   _____                                 _ _   _ _____
+ * | |  | |    | | |_   _|                 (_)           | | | | |_   _|
+ * | |  | | ___| |__ | | ___ _ __ _ __ ___  _ _ __   __ _| | | | | | |
+ * | |/\| |/ _ \ '_ \| |/ _ \ '__| '_ ` _ \| | '_ \ / _` | | | | | | |
+ * \  /\  /  __/ |_) | |  __/ |  | | | | | | | | | | (_| | | |_| |_| |_
+ *  \/  \/ \___|_.__/\_/\___|_|  |_| |_| |_|_|_| |_|\__,_|_|\___/ \___/
+ *  
+ * Antoine LANDRIEUX 2025 (MIT LICENSE)
+ * <https://github.com/AntoineLandrieux/WebTerminalUI>
+ * 
+ */
+
+/**
+ *
+ * Designed for:
+ *
+ * <div class="terminal">
+ *     <div class="task">
+ *         <div class="circle hide-terminal"></div>
+ *         <div class="circle full-terminal"></div>
+ *         <div class="circle close-terminal"></div>
+ *     </div>
+ *     <div class="terminal-content">
+ *         <p>Content <span class="blink-anim">&#9608;</span></p>
+ *     </div>
+ * </div>
+ *
+ */
+
+div.terminal {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #292e36;
+}
+
+div.terminal.close {
+    display: none;
+}
+
+div.terminal.full {
+    position: fixed;
+    z-index: 9999999999999;
+    height: 80vh;
+    width: 80vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div.terminal div.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+div.terminal div.task div.circle {
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: max(20px, 2vmin);
+    height: max(20px, 2vmin);
+}
+
+div.terminal div.task div.hide-terminal {
+    background-color: #ffff00;
+}
+
+div.terminal div.task div.full-terminal {
+    background-color: #00ff00;
+}
+
+div.terminal div.task div.close-terminal {
+    background-color: #ff0000;
+}
+
+div.terminal.hide div.terminal-content {
+    margin: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+div.terminal.full div.terminal-content {
+    flex: 1;
+    width: auto;
+}
+
+div.terminal div.terminal-content {
+    margin: 10px;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    background-color: #000000;
+    font-family: 'Consolas', monospace, sans-serif;
+}
+
+div.terminal div.terminal-content *,
+div.terminal div.terminal-content p span,
+div.terminal div.terminal-content textarea {
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'Consolas', monospace, sans-serif;
+}
+
+div.terminal div.terminal-content .animasci-frame {
+    color: #ffffff !important; /* For animasci.com */
+}
+
+div.terminal div.terminal-content:has(.animasci-frame) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.terminal div.terminal-content .blink-anim {
+    user-select: none;
+    animation: blink-anim 1.2s infinite;
+}
+
+@keyframes blink-anim {
+
+    from {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
